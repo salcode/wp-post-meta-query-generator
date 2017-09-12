@@ -8,6 +8,10 @@ This project helps me generate these queries quickly.
 
 Built with [Vue.js](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/).
 
+## Online Demo
+
+Demo [WordPress Post Meta Query Builder](https://salcode.github.io/wp-post-meta-query-generator/)
+
 ## Credits
 
 Sal Ferrarello ([salcode](https://github.com/salcode/))
