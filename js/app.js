@@ -57,8 +57,17 @@ var app = new Vue({
 					return true;
 				}
 				query += "\n";
-				query += "\tAND m" + index + ".`meta_value` " + row.comparison + " '" + row.value +
-					"' -- " + row.key;
+				query += "\tAND m" + index + ".`meta_value` " ;
+
+				if ( 'null' === row.comparison ) {
+					query += 'IS NULL';
+				} else {
+					// Use row.comparison as the operator (e.g. =, <>).
+					query += row.comparison + " '" + row.value + "'";
+				}
+
+				// Add comment with key.
+				query += ' -- meta_key: ' + row.key;
 			});
 
 			query += ";";
